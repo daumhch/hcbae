@@ -1,5 +1,9 @@
 package hcbae.demo.mapper;
 
-public interface AddressMapper {
+import java.util.List;
 
+import hcbae.demo.domain.Address;
+
+public interface AddressMapper {
+	List<Address> selectAll();
 }
