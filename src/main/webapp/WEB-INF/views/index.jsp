@@ -11,7 +11,7 @@
 
 <P>  The time on the server is ${serverTime}. </P>
 
-<P>  list : ${list} </P>
+<P>  list : ${addressVo} </P>
 
 </body>
 </html>

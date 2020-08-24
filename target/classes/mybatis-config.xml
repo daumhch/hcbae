@@ -4,7 +4,8 @@
   "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
    <typeAliases>
-         <typeAlias alias="Address" type="hcbae.demo.domain.Address"/>
+        <typeAlias alias="Address" type="hcbae.demo.domain.Address"/>
+        <typeAlias alias="AddressVo" type="hcbae.demo.vo.AddressVo"/>
    
    </typeAliases>
 </configuration>

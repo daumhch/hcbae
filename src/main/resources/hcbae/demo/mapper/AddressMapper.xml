@@ -4,8 +4,19 @@
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="hcbae.demo.mapper.AddressMapper">
 
-  <select id="selectAll" resultType="Address">
-  select * from ADDRESS
-  </select>
+    <select id="selectAll" resultType="Address">
+    select * from ADDRESS
+    </select>
+    
+    <select id="selectTotalCount" resultType="long">
+    select COUNT(SEQ) from ADDRESS
+    </select>
+  
+    <select id="selectPerPage" resultType="Address" parameterType="AddressVo">
+        <![CDATA[select * from (select ROWNUM rnum, aa.* from
+        (select * from ADDRESS) aa)
+        where rnum>${(currentPage-1)*pageSize} and rnum<=${currentPage*pageSize}
+        ]]>
+    </select>
 
 </mapper>
