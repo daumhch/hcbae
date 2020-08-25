@@ -9,8 +9,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.google.gson.Gson;
-
 import hcbae.demo.domain.Address;
 import hcbae.demo.service.AddressService;
 import hcbae.demo.vo.AddressVo;
@@ -18,7 +16,7 @@ import lombok.extern.log4j.Log4j;
 
 @Log4j
 @Controller
-public class IndexController {
+public class AddressController {
 	
 	@Inject
 	private AddressService addressService;
